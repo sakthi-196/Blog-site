@@ -13,6 +13,7 @@ Post Update or Delete: User can edit and delete the posts that they created(They
 This application features a responsive design(responsive on Mobile too),ensuring a seamless user experience.
 
 Technical Specifications:
+
 Backend:
 
   Node.js & Express.js : Used for server-side logic,routing and middleware.
