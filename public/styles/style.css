@@ -88,7 +88,7 @@ header a:hover {
 #handburger:checked ~ .options {
   display: block;
 }
-/* Home & Compose style goes here */
+/* Home and Compose style goes here */
 
 main {
   min-height: 100vh;
