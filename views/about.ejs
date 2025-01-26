@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+<main class="about">
+  <section class="about-child">
+    <h1>About</h1>
+    <p class="roboto-regular">
+      Welcome to our blog platform, a simple and dynamic space where users can
+      share their thoughts, ideas, and stories with the world. Built using
+      MongoDB, Express, Node.js, and EJS, this platform allows users to create,
+      store, and display content effortlessly.Whether you're here to share your
+      experiences or explore posts from others, our blog offers an easy-to-use
+      and engaging environment for everyone.
+      <br />
+      <b>Note:</b>I built this blog project as a coding practice using MongoDB,
+      Express, Node.js, and EJS. In this project, all users can delete or edit
+      any post available in the database because I haven't implemented user
+      authentication (login/signup) yet.
+    </p>
+    <a href="/compose"
+      ><button type="button" class="btn btn-success">Compose</button></a
+    >
+  </section>
+</main>
+<%- include("partials/footer.ejs") %>

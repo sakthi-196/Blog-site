@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<main>
+  <section>
+    <h1>Compose here...</h1>
+    <form action="/compose" method="post">
+      <input
+        type="text"
+        placeholder="Title"
+        name="Title"
+        class="comInp"
+        required
+      />
+      <input type="text" placeholder="Your Name" name="Author" class="comInp" />
+      <textarea
+        placeholder="content"
+        name="Content"
+        cols="40"
+        rows="5"
+        required
+        class="comInp"
+      ></textarea>
+      <button class="btn btn-success compose-button" type="submit">
+        Publish
+      </button>
+    </form>
+  </section>
+</main>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+<main>
+  <div class="posts poppins-light">
+    <div class="posts-child">
+      <!-- edit by clicking title -->
+      <h1><%=Title%></h1>
+      <small
+        class="post-time"
+        data-created="<%=createdAtTime%>"
+        data-updated="<%= updatedAtTime %>"
+      >
+      </small
+      ><br /><br />
+      <p><%=Content%></p>
+      <p>-<%= Author %></p>
+      <a class="btn btn-success" href="/edit/<%=postId%>">Edit</a>
+      <a
+        class="btn btn-danger"
+        href="/delete/<%=postId%>"
+        onclick="return confirm('Are you sure you want to delete this item?')"
+        >Delete</a
+      >
+    </div>
+  </div>
+</main>
+<!--include script file-->
+<script src="/js/script.js"></script>
+<%- include("partials/footer") %>

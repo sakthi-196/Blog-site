@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <div class="blogs ">
+        <div class="blogs-child">
+        <h1 class="heading">Available Posts</h1>
+        <br />
+        <% if (locals.posts) { %>
+            <ul>   
+                <%if(Array.isArray(posts) && posts.length > 0){%>
+                    <%posts.forEach((post)=>{%>
+                        <li class="post-box" onclick="window.location.href='/posts/<%=post._id%>'">
+                            <h1 class="post-heading" onclick="window.location.href='/posts/<%=post._id%>'" ><%= post.Title.substring(0,15)+ '...'%></h1>
+                            <p class="post-time" 
+                                data-created="<%=post.createdAt%>" 
+                                data-updated="<%=post.updatedAt%>">    
+                            </p>
+                            <p class="post-para"  onclick="window.location.href='/posts/<%=post._id%>'"><%= post.Content.substring(0,25)+ "..." %>
+                            <b>Read More</b>
+                            </p>
+                            <p class="post-author">-<%= post.Author %></p>
+                            </li>    
+                    <%});%>
+                <% }else{ %>  
+                    <h3>No posts available</h3>
+                <% } %> 
+            </ul>
+        <% } %>
+        </div>
+    </div>
+</main>
+<!--include script file-->
+<script src="/js/script.js"></script>
+<%- include("partials/footer.ejs") %>
